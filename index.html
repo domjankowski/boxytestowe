@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#kontener {
+  position: relative;
+  background: green;
+  top:150px;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#rejestracja{
+	position: relative; 
+	top:auto;
+	bottom: auto;
+	left: auto;
+	font-size:40px;
+}
+#lewy_kontener {
+  width: 200px;
+  height: 400px;
+  position: relative;       
+  perspective: 100px;
+  left: 0px; top: -276px;
+}
+#lewy {
+  width: 200px;
+  height: 400px;
+  background-color: pink;
+  position: absolute;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: all 1s ease-in;
+}
+#prawy_kontener {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+  left: 200px; top: -676px;
+}
+#prawy {
+  width: 200px;
+  height: 400px;
+  background-color: blue;
+  position: absolute;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transform-origin: right;
+  transition: all 1s ease-in;
+}
+#paseksl {
+  width: 20px;
+  height: 400px;
+  background-color: red;
+  position: relative; 
+  left: 180px;
+}
+#pasekkl {
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  position: relative; 
+  top: -220px;
+}
+#paseksp {
+  width: 20px;
+  height: 400px;
+  background-color: red;
+}
+#pasekkp {
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  position: relative; 
+  top: -220px;
+}
+#przycisk {
+  width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 3px solid white;
+	border-radius: 100% ;
+  position: relative; 
+  left: 147px; top: -927px;
+}
+#magia {
+  width:300px;
+  height: 200px;
+  background-color: blue;
+  position: relative; 
+  left: -45px; top: -228px;
+}
+#magia:hover {
+  
+  background-color:unset;
+  
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+	 function onmouseoverHandler()
+
+    {
+
+      var pr = document.getElementById("prawy");
+      var le = document.getElementById("lewy");
+      var prk = document.getElementById("prawy_kontener");
+      var lek = document.getElementById("lewy_kontener");
+      var py = document.getElementById("przycisk");
+      py.style.backgroundColor = "unset";
+      pr.style.transitionDuration = "5s";
+      le.style.transitionDuration = "5s";
+      py.style.top = "-1500px";
+      le.style.transform = "rotateY(-240deg)";
+      pr.style.transform = "rotateY(240deg)";
+      setTimeout(function() {
+        lek.style.zIndex = "-1";
+        prk.style.zIndex = "-1";
+}, 5000);
+    }
+		
+	</script>
+
+<div id="kontener">
+	<div id="rejestracja">
+		
+<center>
+<form method="POST" action="rejestracja.php">
+	<br><br><br>
+<b>Login:</b> <input type="text" name="login"><br>
+<b>Haslo:</b> <input type="password" name="haslo1"><br>
+<input type="submit" value="Zaloguj sie!" name="rejestruj">
+</form>
+</center>
+  	</div>
+  <div id="lewy_kontener">
+	<div id="lewy" >
+		<div id="paseksl" >
+  		</div>
+  		<div id="pasekkl" >
+  		</div>
+  	</div>
+  </div>
+
+    <div id="prawy_kontener">
+  	<div id="prawy">
+  		<div id="paseksp" >
+  		</div>
+  		<div id="pasekkl" >
+  		</div>
+  	</div>
+  </div>
+
+  	<div id="przycisk" onmouseover="onmouseoverHandler();">
+  	</div>
+  
+</div>
+</body>
+</html>
