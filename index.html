@@ -118,22 +118,20 @@
       var py = document.getElementById("przycisk");
       py.style.backgroundColor = "unset";
       py.style.top = "-1500px";
-      pr.style.transitionDuration = "1s";
-      le.style.transitionDuration = "1s";
-      le.style.transform = "rotateY(-84deg)";
-      pr.style.transform = "rotateY(84deg)";
+      pr.style.transitionDuration = "2s";
+      le.style.transitionDuration = "2s";
+      le.style.transform = "rotateY(-240deg)";
+      pr.style.transform = "rotateY(240deg)";
       setTimeout(function() {
-        pr.style.transitionDuration = "1s";
-        le.style.transitionDuration = "1s";
         sp.style.backgroundColor = "brown";
         spk.style.backgroundColor = "brown";
         sl.style.backgroundColor = "brown";
         slk.style.backgroundColor = "brown";
-        le.style.transform = "rotateY(-240deg)";
-        pr.style.transform = "rotateY(240deg)";
+}, 1050);
+setTimeout(function() {
         lek.style.zIndex = "-1";
         prk.style.zIndex = "-1";
-}, 1000);
+}, 2000);
     }
 		
 	</script>
