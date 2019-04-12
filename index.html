@@ -107,22 +107,33 @@
 	 function onmouseoverHandler()
 
     {
-
+      var sp = document.getElementById("paseksp");
+      var spk = document.getElementById("pasekkp");
+      var sl = document.getElementById("paseksl");
+      var slk = document.getElementById("pasekkl");
       var pr = document.getElementById("prawy");
       var le = document.getElementById("lewy");
       var prk = document.getElementById("prawy_kontener");
       var lek = document.getElementById("lewy_kontener");
       var py = document.getElementById("przycisk");
       py.style.backgroundColor = "unset";
-      pr.style.transitionDuration = "2s";
-      le.style.transitionDuration = "2s";
       py.style.top = "-1500px";
-      le.style.transform = "rotateY(-240deg)";
-      pr.style.transform = "rotateY(240deg)";
+      pr.style.transitionDuration = "1s";
+      le.style.transitionDuration = "1s";
+      le.style.transform = "rotateY(-84deg)";
+      pr.style.transform = "rotateY(84deg)";
       setTimeout(function() {
+        pr.style.transitionDuration = "1s";
+        le.style.transitionDuration = "1s";
+        sp.style.backgroundColor = "brown";
+        spk.style.backgroundColor = "brown";
+        sl.style.backgroundColor = "brown";
+        slk.style.backgroundColor = "brown";
+        le.style.transform = "rotateY(-240deg)";
+        pr.style.transform = "rotateY(240deg)";
         lek.style.zIndex = "-1";
         prk.style.zIndex = "-1";
-}, 5000);
+}, 1000);
     }
 		
 	</script>
@@ -152,7 +163,7 @@
   	<div id="prawy">
   		<div id="paseksp" >
   		</div>
-  		<div id="pasekkl" >
+  		<div id="pasekkp" >
   		</div>
   	</div>
   </div>
